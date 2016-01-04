@@ -3,9 +3,9 @@
 #include <time.h>
 
 int RFib(long long int n){
-	if(n==1)
+	if(n==0)
 		return 0;
-	else if(n==2)
+	else if(n==1)
 		return 1;
 	else
 		return (RFib(n-1)+RFib(n-2))%2014;
@@ -14,9 +14,11 @@ int RFib(long long int n){
 int main() 
 {
 	long long int n;
-	int x;
-	scanf("%lld",&n);
-	x=RFib(n)%2014;
-	printf("%d\n",x);
+	int t,i;
+	scanf("%d",&t);
+	for(i=0;i<t;i++){
+		scanf("%lld",&n);
+		printf("%d\n",RFib(n));
+	}
 	return 0;
 }

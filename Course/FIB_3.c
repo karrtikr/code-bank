@@ -40,8 +40,10 @@ int** power(int **a,long long int n){
 }
 
 int CleveralgoFib(long long int n){
-	if(n==1)
+	if(n==0)
 		return 0;
+	else if(n==1)
+		return 1;
 	int **a;int i;
 	for (i=0;i<2;i++)
          a=(int**)malloc(2*sizeof(int*));
@@ -53,12 +55,14 @@ int CleveralgoFib(long long int n){
 	return b[0][0];
 }
 
-int main() 
+int main()
 {
 	long long int n;
-	int x;
-	scanf("%lld",&n);
-	x=CleveralgoFib(n);
-	printf("%d\n",x);
+	int t,i;
+	scanf("%d",&t);
+	for(i=0;i<t;i++){
+		scanf("%lld",&n);
+		printf("%d\n",CleveralgoFib(n));
+	}
 	return 0;
 }
