@@ -1,7 +1,7 @@
 #!/bin/bash
 
 sum=0
-count=1
+count=0
 while read num;
 do
     let sum=sum+num;
