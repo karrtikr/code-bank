@@ -1,4 +1,0 @@
-roll,name,total,rank,grade
-001,A B,78,23,C
-002,D S,77,24,C
-003,F YZ,100,1,*
