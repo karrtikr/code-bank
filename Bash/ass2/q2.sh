@@ -21,7 +21,7 @@ while IFS= read -r LINE || [[ -n "$LINE" ]]; do
       	let f=f+1
       fi
 
-done < <(cat 1.txt | cut -d, -f 5-)
+done < <(cat 1.csv | cut -d, -f 5-)
 
 echo "*: $e"
 echo "A: $a"
