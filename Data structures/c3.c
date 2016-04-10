@@ -1,5 +1,6 @@
-#include<stdio.h>
-#include<time.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int RFib(long long int n){
 	if(n==1)

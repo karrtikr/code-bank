@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <time.h>
 #include <stdlib.h>
 
 int** mult(int **a,int **b){
@@ -55,14 +56,15 @@ int CleveralgoFib(long long int n){
 	return b[0][0];
 }
 
-int main()
+int main() 
 {
+	clock_t start,end;
 	long long int n;
-	int t,i;
-	scanf("%d",&t);
-	for(i=0;i<t;i++){
-		scanf("%lld",&n);
-		printf("%d\n",CleveralgoFib(n));
-	}
+	scanf("%lld",&n);
+	start=clock();
+	printf("%d\n",CleveralgoFib(n));
+	end=clock();
+	double t=(double)(end-start)/CLOCKS_PER_SEC;
+	printf("%lf\n",t);
 	return 0;
 }

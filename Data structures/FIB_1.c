@@ -13,12 +13,13 @@ int RFib(long long int n){
 
 int main() 
 {
+	clock_t start,end;
 	long long int n;
-	int t,i;
-	scanf("%d",&t);
-	for(i=0;i<t;i++){
-		scanf("%lld",&n);
-		printf("%d\n",RFib(n));
-	}
+	scanf("%lld",&n);
+	start=clock();
+	printf("%d\n",RFib(n));
+	end=clock();
+	double t=(double)(end-start)/CLOCKS_PER_SEC;
+	printf("%lf\n",t);
 	return 0;
 }
